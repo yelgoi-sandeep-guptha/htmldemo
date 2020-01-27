@@ -3,10 +3,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
+    <title>Registration Form</title>
+    <style>
+   body{
+       text-align:center;
+       background-repeat:no-repeat;
+       background-size:100%;
+       background-position:center;
+       background-image:url('2.png');
+       background-attachment:fixed;
+       }
+    table,tr,th{
+        border: spacing 10px;
+    }
+    td{
+        font-size:xx-large;   
+    }
+    #a1{
+        font-size: 50px;
+    }
+ </style>
 </head>
 <body>
-    <p></p>
-    
+    <p id="a1">Welcome to Guptha's Book World</p>
+    <form name="myform" onsubmit="return valid()"  method="POST">
+        <h1>REGISTRATION FORM</h1>
+        <table align="center" >
+            <tr>
+                <td>First Name : </td>
+                <td><input type="text" placeholder="FirstName" name="fn"></td>
+            </tr>
+            <tr>
+                <td>Last Name : </td>
+                <td><input type="text" placeholder="LastName" name="ln"></td>
+            </tr>
+            <tr>
+                <td>DateOfBirth : </td>
+                <td><input type="date"  name="dob"></td>
+            </tr>
+            <tr>
+                <td>Email : </td>
+                <td><input type="email" placeholder="email" name="Email"></td>
+            </tr>
+            <tr>
+                <td>Password  :</td>
+                <td><input type="password" placeholder="Password" name="p"></td>
+            </tr>
+            <tr>
+                <td>Confirm Password : </td>
+                <td><input type="password" placeholder="ConfirmPassword" name="cp"></td>
+            </tr>
+            <tr>
+                <td>Phone No : </td>
+                <td><input type="tel" pattern="[0-9]{10}" placeholder="Phone No" name="pno"></td>
+            </tr>
+            <tr>
+                <td>Gender : </td>
+                <td><input type="radio"  name="gender">Male
+                <input type="radio" name="gender">Female</td>
+            </tr>
+            <tr>
+                <td>address:</td>
+                <td><textarea rows="6" cols="20" placeholder="Address"></textarea></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit" ></td>
+                <td><input type="reset"></td>
+            </tr>
+        </table>
+    </form>
 </body>
 </html>
