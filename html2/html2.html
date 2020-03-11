@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #survey-form{
+            padding:1% 20% 0% 20%;
+            max-width: 60%;
+            margin:20%;
+            margin-top: 30px;
+            border: 1px rgb(144, 109, 62)  solid;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            background-color: rgb(47, 47, 204);   
+            line-height:40px;
+        }
+        #title{
+            text-align: center;
+            color: white;
+        }
+        #description{
+            text-align: center;
+        }
+        body{
+            background-color: slategray;
+        }
+        input{
+            border-radius: 15px;
+            width: 200px;
+            height: 25px;
+        }
+        [type=radio]{
+            width: 20px;
+        }
+        [type=checkbox]{
+            width:20px;
+        }
+        #dropdown{
+            width: 200px;
+            height: 25px;
+            border-radius: 15px;
+        }
+        #comment{
+            border-radius: 20px;
+        }
+        #submit{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">JBIET Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+    <form id="survey-form" action="/">
+        <label for="name" id="name-label">Name</label><br>
+        <input type="text" name="Name" id="name" placeholder="Enter your Full Name" required><br>
+        <label for="email" id="email-label">Email </label><br>
+        <input type="email" name="Email" id="email" placeholder="Enter your Email" required><br>  
+        <label for="number" id="number-label"> Roll Number </label><br>
+        <input type="number" name="Roll-Number" id="number" placeholder="Enter your Roll Number" max="100" min="1"><br>
+        <label for="dropdown">Department</label><br>
+        <select name="dropdown" id="dropdown">
+            <option value="none" >Select an option</option>
+            <option value="IT">IT</option>
+            <option value="CSE">CSE</option>
+            <option value="EEE">EEE</option>
+            <option value="ECE">ECE</option>
+            <option value="Mech">Mech</option>
+            <option value="Civil">Civil</option>
+        </select>
+        <br>
+        <label for="learner">What type of learner </label><br>
+        <input type="radio" name="learner" value="Student" id="Student">
+        <label for="Student"> Student </label><br> 
+        <input type="radio" name="learner" value="Teaching" id="Teaching">
+        <label for="Teaching"> Teaching </label><br>
+        <input type="radio" name="learner" value="Non-Teaching" id="Non-Teaching">
+        <label for="Non-Teaching"> Non-Teaching </label>
+        <br>
+        <label for="Languages">Languages Known</label><br>
+        <input type="checkbox" name="C" id="C" value="C">
+        <label for="C">C</label><br>
+        <input type="checkbox" name="Java" id="Java" value="Java">
+        <label for="Java">Java</label><br>
+        <input type="checkbox" name="Python" id="Python" value="Python">
+        <label for="Python">Python</label><br>
+        <input type="checkbox" name="Dart" id="Dart" value="Dart">
+        <label for="Dart">Dart</label><br>
+        <input type="checkbox" name="R" id="R" value="R">
+        <label for="R"></label>R<br>
+        <input type="checkbox" name="C++" id="C++" value="C++">
+        <label for="C++">C++</label><br>
+        <input type="checkbox" name="Many" id="Many" value="Many">
+        <label for="Many">Many more....</label><br>
+        <label for="Comment">Comment</label><br>
+        <textarea name="Comment" id="comment" cols="30" rows="10"></textarea><br>
+        <input type="submit" id="submit" value="submit">
+    </form>
+</body>
+</html>
