@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #navbar {
+        grid-area: advert;
+        position: fixed;
+        padding: 5px 15px 5px 15px;
+    }
+
+    #main {
+        grid-area: content;
+    }
+
+    #main-doc {
+        display: grid;
+        grid-template-columns: 0.5fr 2fr;
+        width: 100%;
+        grid-template-areas:
+            "advert content";
+    }
+
+    #nav-ul {
+        list-style-type: none;
+    }
+
+    @media(max-width:1000px) {
+        #main-doc {
+            display: grid;
+            grid-template-rows: 0.5fr 2fr;
+            grid-template-areas:
+                "advert"
+                "content";
+        }
+
+        #navbar {
+            position: absolute;
+        }
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+        font-size: 25px;
+    }
+
+    #nav-ul {
+        line-height: 100px;
+    }
+
+    header {
+        font-size: 40px;
+        font-weight: bold;
+        color: blue;
+    }
+</style>
+
+<body>
+    <main id="main-doc">
+        <nav id="navbar">
+            <header>C++ Tutorial</header>
+            <ul id="nav-ul">
+                <li>
+                    <a href="#Introduction" class="nav-link">Introduction</a>
+                </li>
+                <li>
+                    <a href="#Basics_of_C++" class="nav-link">Basics of C++</a>
+                </li>
+                <li>
+                    <a href="#Program_Structure" class="nav-link">Program Structure</a>
+                </li>
+                <li>
+                    <a href="#Compound_data_types" class="nav-link">Compound data types</a>
+                </li>
+                <li>
+                    <a href="#Classes" class="nav-link">Classes</a>
+                </li>
+                <li>
+                    <a href="#Other_Language_Features" class="nav-link">Other Language Features</a>
+                </li>
+                <li>
+                    <a href="#C++_Standard_Library" class="nav-link">C++ Standard Library</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="main">
+            <section class="main-section" id="Introduction">
+                <header>Introduction</header>
+                <ul>
+                    <li>
+                        <h3>Compilers</h3>
+                        <p>Computers understand only one language and that language consists
+                            of sets of instructions made of ones and zeros. This Computer language
+                            is called machine language.
+                        </p>
+                        <p>
+                            A program that converts instructions into a machine-code
+                            or lower-level form so that they can be read and executed by
+                            a computer.
+                        </p>
+                        <code>00000 10011110</code><br><br>
+                        <code>
+                       <b>Example :</b><br>
+                        int a,b,sum;<br>
+                        cin&gt&gta;<br>
+                        cin&gt&gtb;<br>
+                        sum=a+b;<br>
+                        cout &lt&lt sum &lt&lt endl;<br>
+                    </code>
+                    </li>
+                </ul>
+            </section>
+            <section class="main-section" id="Basics_of_C++">
+                <header>Basics of C++</header>
+                <ul>
+                    <li>
+                        <h3>Structure of a program</h3>
+                        <code>
+                    //my first program in C++ <br>
+                    #include&ltiostream&gt <br>
+                    int main(){ <br>
+                       std::cout &lt&lt "Hello World";
+                    }
+                </code>
+                        <p><b>Using namespace std</b></p>
+                        <p>
+                            A Namespace is a declarative region that provide a scope
+                            to the identifiers (names of the types , functions , variable etc)
+                            inside it.
+                        </p>syntax :
+                        <code>using namespace std;</code><br>
+                    </li>
+                    <li>
+                        <h3>Variables and types</h3>
+                        <p>
+                            A variable is a name given to a memeory location
+                            It is the basic unit of storage in a program.
+                        </p>
+                        <p><b>Identifier</b></p>
+                        <p>
+                            An Identifier is a name that is assigned by the user for a
+                            program element such as variable, type, template, class, function
+                            or namespace.
+                        </p>
+                    </li>
+                    <li>
+                        <p><b>Fundamental and datatypes </b></p>
+                        <ul>
+                            <li><b>Character type :</b> store Single chracter , char type , 1 byte character.</li>
+                            <li><b>Numerical Integer type :</b> store whole number value, signed and unsigned. </li>
+                            <li><b>Floating Point type :</b> Real Values , Different types of precision.</li>
+                            <li><b>Boolean type :</b> bool , true and false.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><b>Declarations and Initialization of variables </b></p>
+                        <code>int x=0;</code>
+                        constructor initialization <br>
+                        <code>int x (0);</code><br>
+                        uniform initialization <br>
+                        <code>int x {0};</code> <br>
+                    </li>
+                    <li>
+                        <p><b>Type deduction: auto and decltype</b></p>
+                        auto: <code>int foo = 0; <br>
+                    auto bar = foo;</code>
+                        decltype : <code>int foo=0;<br>
+                        decltype(foo) bar;<br>
+                    </code>
+                    </li>
+                </ul>
+            </section>
+            <section class="main-section" id="Program_Structure">
+                <header>Program Structure</header>
+                <ul>
+                    <li>
+                        <h3>Statements and flow control</h3>
+                        <ul>
+                            <li>
+                                <p><b>Selection statements : if and else</b></p>
+                                <code>if(x==100) <br>
+                                cout &gt&gt "x is 100" <br>
+                            </code>
+                                <p><b>Range based for loop :</b></p>
+                                <code>
+                                for(char c : "sandeep") <br>
+                                cout &gt&gt c ;<br>
+                            </code>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Functions</h3>
+                        <p>
+                            Functions allow to structure programs in segments of code to perform individual tasks.</p>
+                    </li>
+                </ul>
+            </section>
+            <section class="main-section" id="Compound_data_types">
+                <header>Compound data types</header>
+                <p> Arrays, Character sequences , Pointers, Dynamic memory , Data Structures.</p>
+            </section>
+            <section class="main-section" id="Classes">
+                <header>Classes</header>
+                <p>An object is an instantiation of a class. In terms of variables, a class would be the type, and an
+                    object would be the variable.</p>
+                <ul>
+                    <li>Classes</li>
+                    <li>Special members</li>
+                    <li>Friendship and inheritance</li>
+                    <li>Polymorphism</li>
+                </ul>
+            </section>
+            <section class="main-section" id="Other_Language_Features">
+                <header>Other Language Features</header>
+                <ul>
+                    <li>Type Conversions</li>
+                    <li>Exceptions</li>
+                    <li>Preprocessor directives</li>
+                </ul>
+            </section>
+            <section class="main-section" id="C++_Standard_Library">
+                <header>C++ Standard Library</header>
+                <p>Input/output with files</p>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
