@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media(min-width:300px){
+            body{
+                font-size: 30px;
+            }
+        }
+#nav-bar{
+    background-color: black;
+    margin: 5px;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+}
+a:link , a:active ,a:hover, a:visited{
+    text-decoration:none;
+    color:white;
+    padding: 30px;
+    margin: 30px;
+}
+#search{
+    float:right;
+    border-radius: 10px;
+    height: 30px;
+    width: 200px;
+}
+#header-img{
+    width: 100px;
+    height: 30px;
+    padding-right: 100px;
+}
+#video{
+    width: 25%;
+    padding: 20px;
+    margin-top: 100px;
+}
+#a1{
+text-align: center;
+}
+#form{
+    text-align: center;
+   
+}
+[type=email]{
+    border-radius: 20px;
+    width: 150px;
+    height: 20px;
+}
+[type=submit]{
+    border-radius: 10px;
+    width: 100px;
+    margin: 20px;
+}
+img{
+    width: 300px;
+    height: 300px;
+}
+.info{
+    padding: 5% 30% 5% 30%;
+    text-align: center;
+   
+}
+li{
+    text-align: left;
+}
+</style>
+</head>
+
+<body>
+    <header id="header">
+        <nav id="nav-bar">
+            <span><img id="header-img" src="2.jpeg" alt=""></span>
+            <a href="#PC&Laptops" class="nav-link">Laptops</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#About" class="nav-link">About Sandeep</a>
+            <input type="search" placeholder="What are you looking for ?" id="search">
+        </nav>
+        <div id="a1"><video width="320" height="240" id="video" controls>
+            <source src="https://youtu.be/NbyHNASFi6U" type="video/mp4">
+            Your browser does not support
+        </video></div>
+        <form action="https://www.freecodecamp.com/email-submit" id="form">
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email" placeholder="Enter your mail id"><br>
+            <input type="submit" value="submit" id="submit">
+            <div id="PC&Laptops">
+                <h2>Laptop Images</h2>
+                <img src="https://i.gadgets360cdn.com/large/mi_gaming_laptop_2019_image_1565003115644.jpg" alt="">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/61g8k9BR0BL._SL1126_.jpg" alt="">
+                <img src="https://www.lg.com/us/images/laptops/md06060216/gallery/01-1100-v1.jpg" alt=""><br>
+                <p class="info">
+                    A laptop computer is a portable personal computer powered by a battery,
+                    or an AC cord plugged into an electrical outlet, which is also used to 
+                    charge the battery. ... A laptop also has a thin display screen that 
+                    is attached and can be folded flat for transport.
+                </p>
+            </div>
+            <div id="services">
+                <h3>How it Works?</h3>
+                <ul class="info">
+                    <li>Repair services for laptop, computer, and accessories at your home’s comfort</li>
+                    <li>Trained and experienced technicians with reasonable rates, at your service  </li>
+                    <li>Final price to be quoted on inspection of scope of work</li>
+                </ul>  
+            </div>
+            <div id="About" class="info">
+                <h3>Sandeep</h3>
+                Sandeep's full Name is Yelgoi Sandeep Guptha .He is very good boy. He is more intelligent and Smart Worker . He can do any thing
+            </div>
+        </form>
+    </header>
+</body>
+</html>
